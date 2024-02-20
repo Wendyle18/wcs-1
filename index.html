@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--suppress HtmlDeprecatedAttribute -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/fontawesome/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/fontawesome/solid.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/mobiledashboard.css">
+    <link rel="icon" type="image" href="assets/img/2.png">
+    <title>SysGuard Dashboard</title>
+
+</head>
+
+<header>
+  <!--Hamburger Icon-->
+  <div class="menu-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+  </div>
+          <ul class="menu-items">
+              <li><a href="index.html">Tickets</a></li>
+              <li><a href="/pages/mobileadmin.html">Admins</a></li>
+              <li><a href="/pages/mobileProfile.html">Profile</a></li>
+              <li><a class="logout" href="/pages/mobile.html">Log Out</a></li>
+          </ul>
+  <!---End of Hamburger Icon--->
+
+          <div class="search-container">
+              <form action="/action_page.php">
+                <input type="text" placeholder="Search Ticket" name="search">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+            </div>
+          <h1>SysGuard</h1>
+</header>   
+
+    <body>
+          
+      <!-- Modal -->
+                  <div class="modal" id="myModal">
+                    <div class="addticketPanel">
+                        <div class="addticketHeader">
+                            <span class="close">&times;</span>
+                            <h2>Add Ticket</h2>
+                        </div>
+                        <div class="formPanel">
+                            <h5>Please provide information below:</h5>
+                                            <form action = "" id="addNewTicketModal">
+                                                <label for="subj">Subject:</label><br>
+                                                <select id="subj" name="subj">
+                                                    <option value="Hardware">Hardware</option>
+                                                    <option value="Networking">Network</option>
+                                                    <option value="Software">Software</option>
+                                                    <option value="Other">Others</option>
+                                                </select><br><br>
+                                                <label for="description">Describe the Problem:</label><br>
+                                                <input type="text" id="description" name="description"><br>
+                                                <input type="submit" value="Submit" id = "submitBtn">
+                                            </form>
+                        </div>
+                        
+                    </div>
+                    
+              </div>
+    
+
+                    
+                    <div class="sidebar">
+        
+                      <a href="index.html"><i class="fa-regular fa-ticket"><br><br>Tickets</i></a>
+                      <a href="pages/mobileadmin.html"><i class="fas fa-user-friends"><br><br>Admins</i></a>
+                      <a href="pages/mobileProfile.html"><i class="fas fa-user-circle"><br><br>Profile</i></a>
+                      <a href="pages/mobile.html"><i class="fas fa-sign-out-alt"><br></br>Sign-Out</i></a>
+                    </div>
+                    
+                      <div class="panel">
+                              <button class="addTicket" id="ticketbutton" >Add Ticket</button>
+                                  <div class="filterIcon">
+                                    <i class="fas fa-sort"></i>
+                                    <i class="fas fa-filter"></i>
+                                    <i class="fas fa-eye-slash"></i>
+                                  </div>
+                          
+                                  <div class="tablePanel">
+                                      <table>
+                                      
+                                          <thead>
+                                            <tr>
+                                              <th scope="col">Date</th>
+                                              <th scope="col">Subject</th>
+                                              <th scope="col">Assignee</th>
+                                              <th scope="col">Status</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td data-label="Date">February 13, 2013</td>
+                                              <td data-label="Subject">Software</td>
+                                              <td data-label="Assignee">Sasuke</td>
+                                              <td data-label="Status">Pending</td>
+                                            </tr>
+                                            <tr>
+                                              <td scope="row" data-label="Date">February 13, 2013</td>
+                                              <td data-label="Subject">Hardware</td>
+                                              <td data-label="Assignee">Yusuke</td>
+                                              <td data-label="Status">Pending</td>
+                                            </tr>
+                                            <tr>
+                                              <td scope="row" data-label="Date">February 13, 2013</td>
+                                              <td data-label="Subject">Network</td>
+                                              <td data-label="Assignee">Wendyle</td>
+                                              <td data-label="Status">Solved</td>
+                                            </tr>
+                                            <tr>
+                                              <td scope="row" data-label="Date">February 13, 2013</td>
+                                              <td data-label="Subject">Network</td>
+                                              <td data-label="Assignee">Wendyle</td>
+                                              <td data-label="Status">Pending</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                  
+                                  </div>
+                    </div>
+                
+                </div>
+  <script src="/assets/js/dashboard.js"></script>
+</body>
+</html>
